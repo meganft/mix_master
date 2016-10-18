@@ -11,9 +11,10 @@ RSpec.feature "User deletes an artist" do
 
     visit artists_path
     click_on "Taylor"
-
     click_on "Delete"
+
     expect(page).to have_content("All Artists")
-    expect(page).to_not have_css("Taylor")
+    expect(page).to_not have_content("Taylor")
+    expect(page).to have_current_path("/artists")
   end
 end

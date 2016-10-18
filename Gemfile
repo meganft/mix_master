@@ -29,6 +29,7 @@ gem 'unicorn'
 gem 'rb-readline'
 
 gem 'better_errors'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -39,6 +40,8 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
+  gem "database_cleaner"
+  gem "factory_girl_rails"
 end
 
 

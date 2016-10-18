@@ -15,7 +15,6 @@ RSpec.feature "User edits an artist" do
     fill_in "artist_name", with: "New Artist"
     click_on "Update Artist"
 
-
     expect(page).to have_content("New Artist")
     expect(page).to have_css("img[src=\"#{artist_image}\"]")
   end
