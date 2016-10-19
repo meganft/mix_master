@@ -5,6 +5,7 @@ RSpec.feature "User edits a playlist" do
 
     song1, song2, = create_list(:song, 2)
     playlist = create(:playlist)
+    PlaylistSong.create(song_id: song1.id, playlist_id: playlist.id)
 
     visit playlists_path
 

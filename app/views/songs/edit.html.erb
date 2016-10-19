@@ -1,9 +1,3 @@
+<h2>Edit Song</h2>
 
-
-
-<%= form_for([@artist, @song]) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-
-  <%= f.submit  %>
-<% end %>
+  <%= render partial: "form" %>
