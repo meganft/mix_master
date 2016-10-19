@@ -1,6 +1,13 @@
 * {
   font-family: Helvetica Neue, sans-serif;;
 }
+.newartist {
+  border: 1px solid black;
+  border-radius: 5%;
+  background-color: lightgrey;
+  margin-right: 500px;
+  margin-left: 500px;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
