@@ -1,0 +1,15 @@
+
+<%= render partial: "shared/errors", locals: { target: @playlist } %>
+
+<%= form_for(@playlist) do |f| %>
+  <%= f.text_field :name %>
+
+  <% @songs.each do |song| %>
+    <div>
+      <%= check_box_tag :song_ids, song.id, @playlist.songs.include?(song), :name => 'playlist[song_ids][]', id: "song-#{song.id}" %>
+      <%= song.title %>
+    </div>
+  <% end %>
+
+  <%= f.submit %>
+<% end %>
